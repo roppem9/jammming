@@ -7,7 +7,7 @@
 }
 
 .SearchBar input {
-  width: 287px;
+  width: 350px;
   padding: .88rem 0;
   border: 1px solid #fff;
   border-radius: 3px;
@@ -21,7 +21,7 @@
   outline: none;
 }
 
-.SearchBar a {
+.SearchBar button {
   cursor: pointer;
   width: 8.11rem;
   padding: .77rem 0;
@@ -30,8 +30,26 @@
   text-align: center;
   font-size: .833rem;
   transition: background-color .25s;
+  margin-bottom: 2.22rem;
+  color: #fff;
+  border-color: #010c3f;
+  font-family: 'Work Sans', sans-serif;
 }
 
-.SearchBar a:hover {
+.SearchConfirmation {
+  margin-bottom: 2.22rem;
+}
+
+.SearchBar button:hover {
   background-color: rgba(108, 65, 233, .7);
+  border-color: rgba(108, 65, 233, .7);
+}
+
+.SearchBar button:focus {
+  outline: 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
 }
