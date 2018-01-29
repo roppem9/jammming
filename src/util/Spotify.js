@@ -12,10 +12,10 @@ export const Spotify = {
 		if (accessToken) {
 			return accessToken;
 		} else if (url.match(/access_token=([^&]*)/) && url.match(/expires_in=([^&]*)/)) {
-				accessToken = url.match(/access_token=([^&]*)/)[1];
-				expTime = url.match(/expires_in=([^&]*)/)[1];
-				window.setTimeout(() => accessToken = '', expTime * 1000);
-				return accessToken;
+			accessToken = url.match(/access_token=([^&]*)/)[1];
+			expTime = url.match(/expires_in=([^&]*)/)[1];
+			window.setTimeout(() => accessToken = '', expTime * 1000);
+			return accessToken;
 		} else {
 			console.log('redirect...');
 			const queryUrl = urlAPI + `client_id=${clientID}&redirect_uri=${redirectURI}&response_type=token&scope=playlist-modify-public`;
