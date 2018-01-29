@@ -1,5 +1,5 @@
 let clientID = '0d03ae8b463b4f45bc5e141ab0f05a3f';
-let redirectURI = 'https://eliz-jammming.surge.sh';
+let redirectURI = 'http://localhost:3000/';
 const urlAPI = 'https://accounts.spotify.com/authorize?';
 
 let accessToken = '';
