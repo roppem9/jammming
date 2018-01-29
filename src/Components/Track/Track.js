@@ -25,11 +25,6 @@ export class Track extends React.Component {
 	render() {
 		return (
 			<div className="Track">
-				{/*<iframe src={`https://open.spotify.com/embed?uri=${this.props.uri}`}
-						frameBorder="0"
-						allowtransparency="true"
-						height="80px"
-						width="640px"></iframe>*/}
   				<div className="Track-information">
     				<h3>{this.props.track.name}</h3>
     				<p>{this.props.track.artist} | {this.props.track.album}</p>
