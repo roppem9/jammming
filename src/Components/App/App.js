@@ -9,9 +9,10 @@ import { Spotify } from '../../util/Spotify';
 export class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { searchResults: [],
-                   playlistName: 'New Playlist',
-                   playlistTracks: [] };
+    this.state = {searchResults: [],
+                  placeholder: 'Add new playlist',
+                  playlistName: '',
+                  playlistTracks: []};
     
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
@@ -58,7 +59,8 @@ export class App extends React.Component {
     Spotify.savePlaylist(this.state.playlistName, trackURIs);
     this.setState({ 
       searchResults: [],
-      playlistName: 'New Playlist',
+      placeholder: 'Add another playlist',
+      playlistName: '',
       playlistTracks: []
     });
   }
@@ -78,7 +80,8 @@ export class App extends React.Component {
             <div className="App-playlist">
                 <SearchResults searchResults={this.state.searchResults}
                                onAdd={this.addTrack} />
-                <Playlist playlistName={this.state.playlistName}
+                <Playlist placeholder={this.state.placeholder}
+                          playlistName={this.state.playlistName}
                           playlistTracks={this.state.playlistTracks}
                           onRemove={this.removeTrack}
                           onNameChange={this.updatePlaylistName}
